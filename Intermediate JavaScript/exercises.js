@@ -1,4 +1,4 @@
-// Love score calculator
+// Love score calculator Challenge
 function loveCalculator() {
   var nameOfPerson1 = prompt("Enter the name of the first person");
   var nameOfPerson2 = prompt("Enter the name of the first person");
@@ -8,7 +8,7 @@ function loveCalculator() {
   alert("You love score is " + loveScore);
 }
 
-// Create a BMI Calculator Advanced
+// Create a BMI Calculator Advanced Challenge
 
 function bmiCalculatorAdvanced(weight, height) {
   //var bmi = Math.floor(weight / (height * height));
@@ -58,20 +58,62 @@ var interpretation = isLeap(2000);
 console.log(interpretation);
 
 // Fizz Buzz Challenge
+var count = 1;
 var output = [];
-var number = 1;
-
 function fizzBuzz() {
-  if (number % 3 === 0 && number % 5 !== 0) {
-    output.push("Fizz");
-  } else if (number % 3 !== 0 && number % 5 === 0) {
-    output.push("Buzz");
-  } else if (number % 3 === 0 && number % 5 === 0) {
-    output.push("FizzBuzz");
-  } else {
-    output.push(number);
+  while (count <= 100) {
+    if (count % 3 === 0 && count % 5 !== 0) {
+      output.push("Fizz");
+    } else if (count % 3 !== 0 && count % 5 === 0) {
+      output.push("Buzz");
+    } else if (count % 3 === 0 && count % 5 === 0) {
+      output.push("FizzBuzz");
+    } else {
+      output.push(count);
+    }
+    count++;
   }
-
-  number++;
   console.log(output);
 }
+
+fizzBuzz();
+
+// Who is buying lunch Challenge
+function whosPaying(names) {
+  var randomNumber = Math.floor(Math.random() * names.length);
+  console.log(randomNumber);
+  return names[randomNumber] + " is going to buy lunch today!";
+}
+whosPaying(["Angela", "Jack", "Pam", "James", "Lara", "Gaspard"]);
+
+// 99 Bottles of beer Challenge
+var count = 99;
+var bottleWord;
+var action;
+
+function beer() {
+  while (count >= 0) {
+    if (count === 0) {
+      bottleWord = "No more bottles ";
+      action = "Go to the store and buy some more, 99 bottles";
+    } else if (count === 1) {
+      bottleWord = count + " bottle ";
+      action = "Take 1 down, pass it arround, no more bottles";
+    } else {
+      bottleWord = count + " bottles ";
+      action = "Take 1 down, pass it arround, " + (count - 1) + " bottles";
+    }
+    console.log(
+      bottleWord +
+        "of beer on the wall, " +
+        bottleWord +
+        "of beer. " +
+        action +
+        " of beer on the wall."
+    );
+    count--;
+  }
+}
+beer();
+
+// Fibonaci Sequence Challenge

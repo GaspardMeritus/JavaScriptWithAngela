@@ -6,9 +6,20 @@ console.log(n);
 n = Math.floor(n) + 1; // simulating dice roll haveing 6 possibilities
 console.log(n);
 
-// Control flow
+// Control flow with IfElse
 if (condition) {
 } else {
+}
+
+// Control flow with While Loop
+
+while (condition) {
+  // code
+}
+
+// Control flow with For Loop
+for (let index = 0; index < array.length; index++) {
+  // code
 }
 
 // Arrays
